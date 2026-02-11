@@ -1,9 +1,12 @@
 //1. Создай функцию, которая принимает произвольное количество чисел и возвращает их среднее значение;
 
-const numbers = [1, 2, 3, 4, 5];
-const sum = numbers.reduce ((acc, item) => acc + item, 0);
-const average = sum / numbers.length;
-console.log(average);
+function getAverage(...numbers) {
+  if (numbers.length === 0) return 0;
+
+  return numbers.reduce((acc, item) => acc + item, 0) / numbers.length;
+}
+
+
 
 /*2. Создай функцию, которая принимает объект с информацией о пользователе (имя, возраст, страна)
      и возвращает строку с этой информацией, используя деструктуризацию;*/
